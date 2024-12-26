@@ -1,5 +1,5 @@
+import legacy from '@vitejs/plugin-legacy';
 import process from 'process';
-import { viteSingleFile } from 'vite-plugin-singlefile';
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -11,5 +11,9 @@ export default {
     define: {
         APP_VERSION: JSON.stringify(process.env.npm_package_version),
     },
-    plugins: [viteSingleFile()],
+    plugins: [
+        legacy({
+            targets: ['defaults', 'not IE 11'],
+        }),
+    ],
 };
