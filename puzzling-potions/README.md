@@ -51,6 +51,21 @@ npm run build
 npm run preview
 ```
 
+# Run in Andorid
+
+```sh
+cd ./puzzling-potions
+
+# Compile the game
+npm run build
+
+# Enter the android project
+cd ../Pixijs-Android
+
+# Build the android app
+./gradlew assembleDebug
+```
+
 # Compiling Assets
 
 Assets are compiled whenever you start or build the project, but they are not 'watched' (yet) like regular code while developing. If you add/modify/remove any assets while developing, you have to run `npm run assets` manually to recompile them and make the changes to take effect.

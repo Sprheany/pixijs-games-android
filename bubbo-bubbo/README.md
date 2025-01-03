@@ -37,6 +37,21 @@ npm run start
 # Compile the game into a bundle, which can be found in `dist/`
 npm run build`
 ```
+
+# Run in Andorid
+```sh
+cd ./bubbo-bubbo
+
+# Compile the game
+npm run build
+
+# Enter the android project
+cd ../Pixijs-Android
+
+# Build the android app
+./gradlew assembleDebug
+```
+
 # Known issues
 - Asset bundles aren't currently watched, so any assets being added or removed would mean you have to run `npm run build-assets` again
 - It may take a while for vite to launch the game on localhost
